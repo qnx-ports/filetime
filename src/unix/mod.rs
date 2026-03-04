@@ -22,7 +22,8 @@ cfg_if::cfg_if! {
                         target_os = "freebsd",
                         target_os = "netbsd",
                         target_os = "openbsd",
-                        target_os = "haiku"))] {
+                        target_os = "haiku",
+                        target_os = "nto"))] {
         mod utimensat;
         pub use self::utimensat::*;
     } else {
